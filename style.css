@@ -1,0 +1,230 @@
+body{
+    margin: 0;
+}
+
+.navbar{
+    height: 12vh;
+    background-color: black;
+    display: flex;
+}
+
+*{
+    box-sizing: border-box;
+    /* border box = height+padding+border = 100vh */
+    /* if no border-box then height(content) is 100vh */
+}
+
+.ticket-container{
+    background-color: white;
+    height: 88vh;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    /*  */
+    /* wrap the text to new line */
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.filter-container, .add-delete-container{
+    background-color: #444;
+    margin-top: 2vh;
+    margin-left: 8vh;
+    height: 8vh;  /*in dono element ko flexible bnana tha toh inke parent ko display:flex property de do*/
+    
+    
+}
+
+.filter-container{
+    width: 18vw;
+    display: flex;
+}
+
+.add-delete-container{
+    width: 9vw;
+    display: flex;
+}
+
+.filter, .add, .delete{
+    height: 100%;
+}
+
+.filter{
+    width: 25%;
+}
+
+.add{
+    width: 50%;
+}
+
+.delete{
+    width: 50%
+}
+
+.green-color-btn,
+.pink-color-btn,
+.black-color-btn,
+.blue-color-btn{
+    display : block;
+    width : 50%;
+    height: 50%;
+    margin: calc(8vh * 0.25) calc(4.5vw * 0.25) calc(8vh * 0.25) calc(4.5vw * 0.25);
+    border-radius: 33%;
+    
+}
+
+.green-color-btn, .green-modal-filter{
+    background-color: green;
+}
+
+.pink-color-btn, .pink-modal-filter{
+    background-color: pink;
+}
+
+.black-color-btn, .black-modal-filter{
+    background-color: black;
+}
+
+.blue-color-btn, .blue-modal-filter{
+    background-color: blue;
+}
+
+.action-button{
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    background-color: white;
+    display: block;
+    margin: calc(8vh * 0.25) calc(4.5vw * 0.25) calc(8vh * 0.25) calc(4.5vw * 0.25);
+}
+
+.add:hover, .delete:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+.filter:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+/* .ticket-container{
+    position: relative;
+} */
+
+.modal{
+    height: 18rem;
+    width: 35rem;
+    background-color: white;
+    display: flex;
+    /* box-shadow: h-offset v-offset blur spread color;
+    z-index : to sshow ovelapping which element appear above each other */
+    box-shadow: 0 0 50px 10px rgb(100, 91, 62);
+    position: absolute;
+    top: calc((88vh - 18rem) / 2);
+    left: calc((100vw - 35rem) / 2);
+    /* top: 20px;
+    left: 200px; */
+}
+
+/* 
+    position:absolute tbhi work krta h jb uske parent ke pass 
+    position:absolute ho vrna voh body ke respect mein show krne lgega
+*/
+
+.task-to-be-added{
+    height: 100%;
+    width: 70%;
+    background-color: cornsilk;
+    padding: 3rem;
+    outline: none;
+}
+
+.priority-list{
+    height: 100%;
+    width: 30%;
+    background-color: burlywood;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.modal-filter{
+    height: 20%;
+    width: 100%;
+}
+
+.modal-filter:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.modal-filter.active{
+    border: 2px solid white;
+}
+
+.placeholder{
+    color: gray;
+}
+
+.ticket{
+    height: 9rem;
+    width: 16rem;
+    background-color: gainsboro;
+    /* border:1px solid black; */
+    /* margin: 0 auto;   replace by justifycontent:spacebetween from ticket-container */
+}
+
+.ticket-color{
+    height: 6%;
+    width: 100%;
+}
+
+.ticket-id{
+    height: 15%;
+    width: 100%;
+    color: gray;
+    padding: 3%;
+    /*
+    total vertical padding = 3+3
+    content for text = height - total vertical padding i.e. 9%
+    */
+}
+
+.task{
+    padding: 3%;
+    height: 79%;
+    width: 100%;
+}
+
+.ticket-color-black{
+    background-color: black;
+}
+
+.ticket-color-pink{
+    background-color: pink;
+}
+
+.ticket-color-green{
+    background-color: green;
+}
+
+.ticket-color-blue{
+    background-color: blue;
+}
+
+.ticket.active {
+    box-shadow: 0 0 5px 1px;
+}
+
+
+
+
+
+
+
+
+
+
